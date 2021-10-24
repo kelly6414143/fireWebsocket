@@ -1,19 +1,19 @@
-import _ from 'lodash'
-import printMe from './print.js';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-function component() {
-    const element = document.createElement('div');
-    const btn = document.createElement('button');
-
-    // Lodash, now imported by this script
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-    btn.innerHTML = 'Click me and check the console!';
-    btn.onclick = printMe;
-
-    element.appendChild(btn);
-
-
-    return element;
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+        };
+    }
+    render() {
+        return (
+            <div>
+                <h1>Hello, World!</h1>
+            </div>
+        );
+    }
 }
 
-document.body.appendChild(component());
+ReactDOM.render(<App />, document.getElementById('app'));
