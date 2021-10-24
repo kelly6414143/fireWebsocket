@@ -29,6 +29,11 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: 'babel-loader'
             },
+            {
+                test: /\.css$/i,
+                include: path.resolve(__dirname, 'src'),
+                use: ['style-loader', 'css-loader', 'postcss-loader'],
+            },
         ],
     },
     // devServer 則是 webpack-dev-server 設定
