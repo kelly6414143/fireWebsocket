@@ -41,6 +41,9 @@ module.exports = {
             },
         ],
     },
+    resolve: {
+        extensions: ['', '.js', '.jsx'],
+    },
     // devServer 則是 webpack-dev-server 設定
     devServer: {
         // inline: true,
