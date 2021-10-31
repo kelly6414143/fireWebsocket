@@ -17,6 +17,7 @@ const Right = ({messages}) =>{
         IOSocket.emit("answer", inputVal)
         // IOSocket.emit("message", inputVal)
         // console.log(inputVal)
+        setInputVal("")
     }
 
     return <div className={"h-full pl-5"}>
@@ -34,7 +35,7 @@ const Right = ({messages}) =>{
             </div>
             <div>
                 <div className={"flex justify-center items-center px-5 py-2 border"}>
-                    <input className={"w-52 mr-2"} type="text" onChange={(val)=>{setInputVal(val.target.value)}}/>
+                    <input value={inputVal} className={"w-52 mr-2"} type="text" onChange={(val)=>{setInputVal(val.target.value)}}/>
                     <div className={"whitespace-nowrap"} onClick={onSubmit}>送出</div>
                 </div>
             </div>

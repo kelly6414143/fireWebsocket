@@ -1,6 +1,6 @@
 import { io } from "socket.io-client";
 
-export let selfId = "4866ef9d-eb61-4926-aae0-4fd8b2c2a277"
+export let selfId = "8da01334-56e7-4654-9985-68c52402f14c"
 
 let socket = io("https://l8-upgrade-ws-api1.herokuapp.com/", {
     reconnectionDelayMax: 10000,

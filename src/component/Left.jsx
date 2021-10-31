@@ -20,7 +20,10 @@ const Left = ({message, users, startTime}) =>{
     },[message])
 
     useEffect(()=>{
-        setUserState(users)
+        const reduceArr = users.length>0 && users.sort((a,b)=>{
+            return b.score - a.score
+        }) || []
+        setUserState(reduceArr)
     },[users])
 
     const onChangeUsers = (msg) => {
@@ -32,7 +35,10 @@ const Left = ({message, users, startTime}) =>{
             }
             arr.push(el)
         })
-        setUserState(arr)
+        const reduceArr = users.length>0 && users.sort((a,b)=>{
+            return b.score - a.score
+        }) || []
+        setUserState(reduceArr)
     }
 
     const onGiveThumb = (type, userID) => {
