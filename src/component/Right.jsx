@@ -34,8 +34,8 @@ const Right = ({messages}) =>{
                 }
             </div>
             <div>
-                <div className={"flex justify-center items-center px-5 py-2 border"}>
-                    <input value={inputVal} className={"w-52 mr-2"} type="text" onChange={(val)=>{setInputVal(val.target.value)}}/>
+                <div className={"flex justify-center items-center px-5 py-2 border-t"}>
+                    <input value={inputVal} className={"w-52 mr-2 border"} type="text" onChange={(val)=>{setInputVal(val.target.value)}}/>
                     <div className={"whitespace-nowrap"} onClick={onSubmit}>送出</div>
                 </div>
             </div>
